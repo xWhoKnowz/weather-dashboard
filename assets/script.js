@@ -1,7 +1,13 @@
-var cityName = document.querySelector(`#cities`);
 var weatherKey = `03c94a8f5d7f90ec48a9d32b889715d8`;
+var cityName = document.querySelector(`#cities`);
 var forecastArray = [];
-var  cardBody= document.querySelectorAll(`.cardText`)
+var cardDate = document.querySelectorAll(`.date`)
+var cardWeather = document.querySelectorAll(`.weather`)
+var cardTemp = document.querySelectorAll(`.temp`)
+var cardWind = document.querySelectorAll(`.wind`)
+var cardHumid = document.querySelectorAll(`.humid`)
+
+
 
 function citySearch(event) {
     event.preventdefault();
@@ -34,14 +40,21 @@ function fiveDayForecast(cities) {
         .then(function (data2) {
             console.log(data2);
             for (let i = 0; i < data2.list.length; i++) {
-                if(data2.list[i].dt_txt.includes('12:00:00')){
+                if(data2.list[i].dt_txt.includes(`12:00:00`)){
                     forecastArray.push(data2.list[i])
                     console.log(data2.list[i]);
                     console.log(forecastArray);
                 }
             }
             for (let i = 0; i < forecastArray.length; i++) {
-                cardBody[i].textContent = forecastArray[i].main.temp
+                var forecastDate = forecastArray[i].dt_txt.split(` `)
+                var weatherIcon = forecastArray[i].weather[0].icon + `.png`
+                cardDate[i].textContent = forecastDate[0]
+                cardWeather[i].textContent =  `https://openweathermap.org/img/wn/${weatherIcon}`
+                cardTemp[i].textContent = `Temp: ` + forecastArray[i].main.temp + ` °F`
+                cardWind[i].textContent = `Wind: ` + forecastArray[i].wind.speed + ` MPH`
+                cardHumid[i].textContent = `Humidity: ` + forecastArray[i].main.humidity + `%`
+
             }
 
             
