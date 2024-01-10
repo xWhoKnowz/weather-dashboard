@@ -15,8 +15,8 @@
 </header>
 <main class="d-flex">
     <aside class="col-3">
-        <label for="" class="form">Search for Cities</label>
-        <input class="cities" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+        <form for="userInput" class="form">Enter a city to search.
+        <input class="form-control" list="datalistOptions" id="cities" placeholder="Type to search...">
         <datalist id="datalistOptions">
             <option value="San Francisco">
             <option value="New York">
@@ -24,6 +24,7 @@
             <option value="Los Angeles">
             <option value="Chicago">
         </datalist>
+      </form>
     </aside>
     <section id="hidden" class="col-9 d-flex flex-wrap">
         <div id="todaysWeather" class="card text-bg-primary mb-3 col-12 ">

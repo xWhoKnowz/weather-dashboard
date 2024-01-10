@@ -1,5 +1,6 @@
 var weatherKey = `03c94a8f5d7f90ec48a9d32b889715d8`;
-var cityName = document.querySelector(`#cities`);
+var formEl = document.querySelector(`#userInput`)
+var cityInput = document.querySelector(`#cities`);
 var forecastArray = [];
 var cardDate = document.querySelectorAll(`.date`)
 var cardWeather = document.querySelectorAll(`.weather`)
@@ -8,11 +9,11 @@ var cardWind = document.querySelectorAll(`.wind`)
 var cardHumid = document.querySelectorAll(`.humid`)
 
 
-
 function citySearch(event) {
     event.preventdefault();
-
-    var searchedCity = cityName.value.trim() 
+    
+    var searchedCity = cityInput.value.trim()
+    console.log(searchedCity);
     
 }
 
@@ -54,13 +55,14 @@ function fiveDayForecast(cities) {
                 cardTemp[i].textContent = `Temp: ` + forecastArray[i].main.temp + ` °F`
                 cardWind[i].textContent = `Wind: ` + forecastArray[i].wind.speed + ` MPH`
                 cardHumid[i].textContent = `Humidity: ` + forecastArray[i].main.humidity + `%`
-
+                
             }
-
             
-
+            
+            
         })
     })
 }
 
 fiveDayForecast()
+
