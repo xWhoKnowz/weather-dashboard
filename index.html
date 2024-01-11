@@ -15,8 +15,8 @@
 </header>
 <main class="d-flex">
     <aside class="col-3">
-        <form for="userInput" class="form">Enter a city to search.
-        <input class="form-control" list="datalistOptions" id="cities" placeholder="Type to search...">
+        <form id="userInput" class="form d-flex">
+        <input class="form-control" list="datalistOptions" id="cities" placeholder="Enter a city to search.">
         <datalist id="datalistOptions">
             <option value="San Francisco">
             <option value="New York">
@@ -24,61 +24,65 @@
             <option value="Los Angeles">
             <option value="Chicago">
         </datalist>
+        <button class="btn btn-primary">Submit</button>
       </form>
+      <ul class="buttons d-flex flex-column"></ul>
     </aside>
     <section id="hidden" class="col-9 d-flex flex-wrap">
-        <div id="todaysWeather" class="card text-bg-primary mb-3 col-12 ">
-            <div class="card-header">Header</div>
+        <div class="card text-bg-primary mb-3 col-12">
+            <div id="date"></div>
             <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <img id="weather">
+              <p id="temp"></p>
+              <p id="wind"></p>
+              <p id="humid"></p>
             </div>
           </div>
 
-          <div class="card text-bg-primary mb-3 col" style="max-width: 18rem;">
-            <div class="date">Header</div>
+          <div class="card text-bg-primary mb-3 col-lg col-md-12 col-sm-12 col-12" style="max-width: 18rem;">
+            <div class="date"></div>
             <div class="cardBody">
-              <h5 class="weather"></h5>
+              <img class="weather">
               <p class="temp"></p>
               <p class="wind"></p>
               <p class="humid"></p>
             </div>
           </div>
 
-          <div class="card text-bg-primary mb-3 col" style="max-width: 18rem;">
-            <div class="date">Header</div>
+          <div class="card text-bg-primary mb-3 col-lg col-md-12 col-sm-12 col-12" style="max-width: 18rem;">
+            <div class="date"></div>
             <div class="cardBody">
-              <h5 class="weather"></h5>
+              <img class="weather">
               <p class="temp"></p>
               <p class="wind"></p>
               <p class="humid"></p>
             </div>
           </div>
 
-          <div class="card text-bg-primary mb-3 col" style="max-width: 18rem;">
-            <div class="date">Header</div>
+          <div class="card text-bg-primary mb-3 col-lg col-md-12 col-sm-12 col-12" style="max-width: 18rem;">
+            <div class="date"></div>
             <div class="cardBody">
-              <h5 class="weather"></h5>
+              <img class="weather">
               <p class="temp"></p>
               <p class="wind"></p>
               <p class="humid"></p>
             </div>
           </div>
 
-          <div class="card text-bg-primary mb-3 col" style="max-width: 18rem;">
-            <div class="date">Header</div>
+          <div class="card text-bg-primary mb-3 col-lg col-md-12 col-sm-12 col-12" style="max-width: 18rem;">
+            <div class="date"></div>
             <div class="cardBody">
-              <h5 class="weather"></h5>
+              <img class="weather">
               <p class="temp"></p>
               <p class="wind"></p>
               <p class="humid"></p>
             </div>
           </div>
 
-          <div class="card text-bg-primary mb-3 col" style="max-width: 18rem;">
-            <div class="date">Header</div>
+          <div class="card text-bg-primary mb-3 col-lg col-md-12 col-sm-12 col-12" style="max-width: 18rem;">
+            <div class="date"></div>
             <div class="cardBody">
-              <h5 class="weather"></h5>
+              <img class="weather">
               <p class="temp"></p>
               <p class="wind"></p>
               <p class="humid"></p>
